@@ -1,4 +1,5 @@
 //Declaring Howard University Object Oriented Programming SP2021 Package - Assignment One
+//Joshua Hector
 package org.howard.edu.lsp.assignment1;
 
 //Hello World class 
