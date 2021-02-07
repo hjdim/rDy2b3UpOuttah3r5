@@ -22,29 +22,25 @@ public class ArrayComboDriver {
 	       int sum2 = 6;
 	       
 	     //test case three
-		   int arr3[] = {25, 345, 343, 12, 32, 76, 78, 544, 5479, 87};
+		   int arr3[] = {10, 12, 32, 50};
 	       int n3 = arr.length;
 	       int sum3 = 44;
 	       
-	     //test case four
-		   int arr4[] = {};
-	       int n4 = arr.length;
-	       int sum4 = 6;
-	       
-	     //test case five
-		   int arr5[] = {1, 2, 3, 4, 5, 6};
-	       int n5 = arr.length;
-	       int sum5 = 0;
-	       
+	  
 	     //test case six 
 		   int arr6[] = {1, 2, 3, 4, 5, 6};
 	       int n6 = arr.length;
-	       int sum6 = 6;
+	       int sum6 = 5;
+	       
+	       //test case six 
+		   int arr7[] = {50, 50,50,50, 100,100,  150, 200};
+	       int n7 = arr.length;
+	       int sum7 = 200;
 	       
 	       //test case outputs
 	       //test case 1
 	       System.out.println("Array : "+Arrays.toString(arr));
-	       System.out.println("Target : "+sum);
+	       System.out.println("Target Sum : "+sum);
 	       System.out.println("Combinations by index");
 	       ArrayComboImplementation.printAllSubsetsAndExceptions(arr, n, sum);
 	       
@@ -52,7 +48,7 @@ public class ArrayComboDriver {
 	       //test case 1
 	       System.out.println("");
 	       System.out.println("Array : "+Arrays.toString(arr2));
-	       System.out.println("Target : "+sum2);
+	       System.out.println("Target Sum : "+sum2);
 	       System.out.println("Combinations by index");
 	       ArrayComboImplementation.printAllSubsetsAndExceptions(arr2, n2, sum2);
 	       
@@ -60,33 +56,32 @@ public class ArrayComboDriver {
 	       //test case 1
 	       System.out.println("");
 	       System.out.println("Array : "+Arrays.toString(arr3));
-	       System.out.println("Target : "+sum3);
+	       System.out.println("Target Sum  : "+sum3);
 	       System.out.println("Combinations by index");
 	       ArrayComboImplementation.printAllSubsetsAndExceptions(arr3, n3, sum3);
 	       
-	       //test case outputs
-	       //test case 1
-	       System.out.println("");
-	       System.out.println("Array : "+Arrays.toString(arr4));
-	       System.out.println("Target : "+sum4);
-	       System.out.println("Combinations by index");
-	       ArrayComboImplementation.printAllSubsetsAndExceptions(arr4, n4, sum4);
-	       
-	       //test case outputs
-	       //test case 1
-	       System.out.println("");
-	       System.out.println("Array : "+Arrays.toString(arr5));
-	       System.out.println("Target : "+sum5);
-	       System.out.println("Combinations by index");
-	       ArrayComboImplementation.printAllSubsetsAndExceptions(arr5, n5, sum5);
 	       
 	       //test case outputs
 	       //test case 1
 	       System.out.println("");
 	       System.out.println("Array : "+Arrays.toString(arr6));
-	       System.out.println("Target : "+sum6);
+	       System.out.println("Target Sum : "+sum6);
 	       System.out.println("Combinations by index");
 	       ArrayComboImplementation.printAllSubsetsAndExceptions(arr6, n6, sum6);
+	       
+	       //test case outputs
+	       //test case 1
+	       System.out.println("");
+	       System.out.println("Array : "+Arrays.toString(arr7));
+	       System.out.println("Target Sum : "+sum7);
+	       System.out.println("Combinations by index");
+	       ArrayComboImplementation.printAllSubsetsAndExceptions(arr7, n7, sum7);
+	       
+	       
+	       
+	       System.out.println(" Issues that were never resolved: Adding negative values to the array. More than two occurences of a repeated number. The numbers not appearing in chronological order");
+	      
+	       
 	   }
 
 
