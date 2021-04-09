@@ -11,8 +11,6 @@ public class IntegerSetTest {
 	/*
 	 * Declaring IntegerSets for testing 
 	 * My IntegerSet class needs to initialize an empty ArrayList to work
-	 * NOTES FOR INSTRUCTOR: The mess up on my assignment 4 with the exceptions was never addressed by me.
-	 * Still the exceptions in this HW assignment are included for smallest() and largest().
 	 */
 	ArrayList<Integer> list1= new ArrayList<>();
 	ArrayList<Integer> list2= new ArrayList<>();
@@ -36,7 +34,7 @@ public class IntegerSetTest {
 		testSet.add(2);
 		testSet.add(3);
 		
-		assertEquals(3, testSet.length());
+		assertEquals("[1, 2, 3]", testSet.toString());
 		
 		testSet.add(4);
 		testSet.add(5);
@@ -48,7 +46,7 @@ public class IntegerSetTest {
 		testSet.add(11);
 		testSet.add(12);
 		
-		assertEquals(12, testSet.length());
+		assertEquals("[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]", testSet.toString());
 		
 		testSet.add(13);
 		testSet.add(14);
@@ -58,7 +56,7 @@ public class IntegerSetTest {
 		testSet.add(18);
 		testSet.add(19);
 		
-		assertEquals(19, testSet.length());
+		assertEquals("[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]", testSet.toString());
 		
 		//if numbers are already present they are not added
 		
@@ -70,7 +68,7 @@ public class IntegerSetTest {
 		testSet.add(18);
 		testSet.add(19);
 		
-		assertEquals(19, testSet.length());
+		assertEquals("[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]", testSet.toString());
 
 	}//test add method
 	
@@ -87,8 +85,8 @@ public class IntegerSetTest {
 		testSet.add(3);
 		
 		testSet.clear();
-		
-		assertEquals(0, testSet.length());
+	
+		assertEquals("[]", testSet.toString());
 	}//test clear method
 	
 	
@@ -136,7 +134,7 @@ public class IntegerSetTest {
 		
 		assertEquals(true, testSet.equals(testSet2));
 		
-		//Testing single IntegerSets
+		//Testing single number IntegerSets
 		testSet.clear();
 		testSet2.clear();
 		
@@ -214,12 +212,9 @@ public class IntegerSetTest {
 		testSet.add(2);
 		testSet.add(3);
 		
-		testSet2.add(1);
-		testSet2.add(2);
-		
 		testSet.removeItem(3);
 		
-		assertEquals(true, testSet.equals(testSet2));	
+		assertEquals("[1, 2]", testSet.toString());	
 		
 	}//test RemoveItem method
 	
@@ -277,7 +272,7 @@ public class IntegerSetTest {
 		
 		IntegerSet testIntersectionSet = testSet.intersection(testSet2);
 	
-		assertEquals(5, testIntersectionSet.length());
+		assertEquals("[1, 2, 3, 4, 5]", testIntersectionSet.toString());
 		
 		//Test 2 - Intersections
 		testSet.clear();
@@ -302,7 +297,7 @@ public class IntegerSetTest {
 		testSet2.add(7);
 		testSet2.add(5);
 		
-		assertEquals(7, testIntersectionSet.length());
+		assertEquals("[1, 2, 3, 4, 5, 6, 7]", testIntersectionSet.toString());
 		
 	}// test Intersection Method
 	
@@ -329,7 +324,7 @@ public class IntegerSetTest {
 		
 		IntegerSet testDifferenceSet = testSet.difference(testSet2);
 	
-		assertEquals(3, testDifferenceSet.length());
+		assertEquals("[5, 6, 7]", testDifferenceSet.toString());
 		
 		//Test 2 - Difference
 		testSet.clear();
@@ -354,7 +349,9 @@ public class IntegerSetTest {
 		testSet2.add(7);
 		testSet2.add(5);
 		
-		assertEquals(7, testDifferenceSet.length());
+		IntegerSet testDifferenceSet2 = testSet.difference(testSet2);
+		
+		assertEquals("[]", testDifferenceSet2.toString());
 		
 	}// test Intersection Method
 	
