@@ -1,10 +1,11 @@
-package org.howard.edu.assignment7.junit;
+package org.howard.edu.lsp.assignment7.junit;
 
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.howard.edu.assignment7.tollbooth.*;
+import org.howard.edu.lsp.assignment7.tollbooth.Toll;
+import org.howard.edu.lsp.assignment7.tollbooth.Trucks;
 
 public class TollboothTest {
 	
